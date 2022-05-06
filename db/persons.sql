@@ -8,6 +8,6 @@ CREATE TABLE `persons` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-insert into `persons`(`id`,`name`,`address`) values
-(1,'Josip Jovanovic','Earth'),
-(2,'Rahul Kumar','Mars');
+insert into `persons`(`name`,`address`) values
+('Josip Jovanovic','Earth'),
+('Rahul Kumar','Mars');

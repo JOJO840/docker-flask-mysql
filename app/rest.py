@@ -18,16 +18,19 @@ def persons():
 
     return resp
 
-@app.route('/persons/POST', methods=['POST'])
+@app.route('/persons', methods=['POST'])
 def persons_post():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)
     request.method == 'POST'
 
-    cursor.execute("INSERT INTO persons (id, name, email, phone, adress) values (3, Petter, Earth2 ) ")
+    cursor.execute ('insert into persons (name, address) values ("JOJO", "Earth2") ')
     conn.commit()
 
-    rows = cursor.fetchall()        
+    cursor.execute("SELECT * FROM persons")
+    conn.commit()
+    
+    rows = cursor.fetchall()
     resp = jsonify(rows)
     resp.status_code = 200
 
