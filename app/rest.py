@@ -17,6 +17,7 @@ def persons():
     resp.status_code = 200
 
     return resp
+    
 
 @app.route('/persons', methods=['POST'])
 def persons_post():
