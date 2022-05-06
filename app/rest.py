@@ -11,13 +11,14 @@ def persons():
 
     cursor.execute("SELECT * FROM persons")
     conn.commit()
+    
 
     rows = cursor.fetchall()        
     resp = jsonify(rows)
     resp.status_code = 200
 
     return resp
-    
+
 
 @app.route('/persons', methods=['POST'])
 def persons_post():
