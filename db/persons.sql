@@ -10,6 +10,6 @@ CREATE TABLE `persons` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-insert  into `persons`(`id`,`name`,`email`,`phone`,`address`) values
-(1,'Josip Jovanovic','sorry@gmail.com',2147483647,'Earth'),
+insert into `persons`(`id`,`name`,`email`,`phone`,`address`) values
+(1,'Josip Jovanovic','sroy@gmail.com',2147483647,'Earth'),
 (2,'Rahul Kumar','rahul@gmail.com',34256780,'Mars');

@@ -1,23 +1,23 @@
-from crypt import methods
 import pymysql
-from requests import post
 from app import app
 from db import mysql
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, request
 
-@app.route('/', methods=[GET, POST]) 
+@app.route('/persons', methods=['GET'])
 def persons():
     conn = mysql.connect()
-
     cursor = conn.cursor(pymysql.cursors.DictCursor)
+    request.method == 'GET'
+
     cursor.execute("SELECT * FROM persons")
+    conn.commit()
 
-    rows = cursor.fetchall()
-
+    rows = cursor.fetchall()        
     resp = jsonify(rows)
     resp.status_code = 200
 
     return resp
+        
 
 
 if __name__ == "__main__":
