@@ -26,7 +26,7 @@ def persons_post():
     cursor = conn.cursor(pymysql.cursors.DictCursor)
     request.method == 'POST'
 
-    cursor.execute ('insert into persons (name, address) values ("JOJO", "Earth2") ')
+    cursor.execute ('insert into persons (name, address) values ("JOJO222", "Earth2") ')
     conn.commit()
 
     cursor.execute("SELECT * FROM persons")
